@@ -1,0 +1,94 @@
+
+how can we fetch the value in index in list
+// this is index 
+CrText(
+                        // url is the subpart of support
+                        //   text: dataResponse!['url'].toString(),
+                        
+                        text: listResponse![1].toString(),
+                        style: TextStyle(color: Colors.black),
+                      ),
+                     
+                     
+                      // now we fetch the value in index
+                      CrText(
+                        // url is the subpart of support
+                        //   text: dataResponse!['url'].toString(),
+                        
+                        text: listResponse![1]['first_name'].toString(),
+                        style: TextStyle(color: Colors.black),
+                      ),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                      Center(
+        child: Container(
+          height: 200,
+          width: 300,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: Colors.blue,
+          ),
+          child: Column(
+            children: [
+              Center(
+                // child: mapResponse == null
+                //     ? Icon(Icons.arrow_back)
+                //     : CrText(text: mapResponse!['data'].toString()),
+
+                child: dataResponse == null
+                    ? Icon(Icons.arrow_back)
+                    : CrText(
+                        // url is the subpart of support
+                        //   text: dataResponse!['url'].toString(),
+                        text: dataResponse!['text'].toString(),
+                      ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                color: Colors.amberAccent,
+                height: 50,
+                width: double.infinity,
+                child: listResponse == null
+                    ? Icon(Icons.arrow_back)
+                    : CrText(
+                        // url is the subpart of support
+                        //   text: dataResponse!['url'].toString(),
+                        text: listResponse![0]['first_name'].toString(),
+                        style: TextStyle(color: Colors.black),
+                      ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                color: Colors.amberAccent,
+                height: 50,
+                width: double.infinity,
+                child: listResponse == null
+                    ? Icon(Icons.arrow_back)
+                    : CrText(
+                        // url is the subpart of support
+                        //   text: dataResponse!['url'].toString(),
+                        text: listResponse![1]['last_name'].toString(),
+                        style: TextStyle(color: Colors.black),
+                      ),
+              ),
+            ],
+          ),
+        ),
+      ),
